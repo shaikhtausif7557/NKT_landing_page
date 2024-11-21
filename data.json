@@ -1,0 +1,92 @@
+[
+    {
+        "name": "Nisar Baig Mohammad Baig Mirza",
+        "role": "President",
+        "bio": "Ex Education Officer BMC",
+        "contact": "9833770714",
+        "email": "nisarbaig2013@yahoo.com",
+        "location": "Kurla, Mumbai",
+        "image": "./assets/members/nisar_biag.jpg"
+    },
+    {
+        "name": "Sadique Ali Shamir Ali Sayed",
+        "role": "Secretary",
+        "bio": "Retired from BPCL Refineries Mumbai",
+        "contact": "9321756911",
+        "email": "sadiquealisayed@gmail.com",
+        "location": "Kurla, Mumbai",
+        "image": "./assets/members/sadique.jpg"
+    },
+    {
+        "name": "Ibrahim A Khan",
+        "role": "Treasurer",
+        "bio": "Sr. Bank Manager, BOI (Retd)",
+        "contact": "9867829858",
+        "email": "shadab.a.khan87@gmail.com",
+        "location": "Kurla, Mumbai",
+        "image": "./assets/members/ibrahim_a_khan.jpg"
+    },
+    {
+        "name": "Abdul Basit Shaikh",
+        "role": "Joint Secretary",
+        "bio": "Ex AO (Schools) MCGM",
+        "contact": "9867250526",
+        "email": "basit107@gmail.com",
+        "location": "Govandi, Mumbai",
+        "image": "./assets/members/abdul_basit.jpg"
+    },
+    {
+        "name": "Abdussaeed Moosa Shaikh",
+        "role": "Managing Trustee",
+        "bio": "Retired Assistant Assessor and Collector, Assessment and Collection Department, Mumbai Mahanagarpalika",
+        "contact": "9967459413",
+        "email": "heyhamu@gmail.com",
+        "location": "Thane",
+        "image": "./assets/members/abussaed.jpg"
+    },
+    {
+        "name": "Muqaddar Mehboob Baig Mirza",
+        "role": "Managing Trustee",
+        "bio": "Retired H.M (BMC)",
+        "contact": "9867952133",
+        "email": "muqaddar125@gmail.com",
+        "location": "Thane",
+        "image": "./assets/members/mehboob.jpg"
+    },
+    {
+        "name": "Shaikh Abdul Khalid Fateh Mohammed",
+        "role": "Managing Trustee",
+        "bio": "Sr. Teacher BMC",
+        "contact": "9867782413",
+        "email": "sk.ab.khalid@gmail.com",
+        "location": "Chandivali, Mumbai",
+        "image": "./assets/members/khalid.jpg"
+    },
+    {
+        "name": "Dr. Saiyed Mohsin Saiyed Kalim",
+        "role": "Managing Trustee",
+        "bio": "Physician and Surgeon",
+        "contact": "9969119279",
+        "email": "mk83sayyed@gmail.com",
+        "location": "Goregaon, Mumbai",
+        "image": "./assets/members/mohsin.jpg"
+    },
+    {
+        "name": "Mushtaque Ahmed Khan Mahboob Khan",
+        "role": "Managing Trustee",
+        "bio": "Ex. Deputy Engineer MHADA",
+        "contact": "9850062802",
+        "email": "mmkhan1600@gmail.com",
+        "location": "Kurla, Mumbai",
+        "image": "./assets/members/mushtaque.jpg"
+    },
+    {
+        "name": "Wasim Salim Shaikh",
+        "role": "Managing Trustee",
+        "bio": "Lecturer, Imamwada DEd Training College BMC",
+        "contact": "8082162486",
+        "email": "wasimgreatmaths@gmail.com",
+        "location": "Ghatkopar, Mumbai",
+        "image": "./assets/members/wasim.jpg"
+    }
+]

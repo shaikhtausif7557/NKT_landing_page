@@ -9,40 +9,43 @@
 </head>
 
 <body class="font-sans">
-    <nav class="flex justify-between items-center px-16 py-4 bg-white shadow-lg" style="color:#1059a8;">
-        <!-- Logo -->
-        <img src="./logo.jpeg" class="w-20">
 
-        <!-- Hamburger menu for mobile -->
-        <div class="md:hidden">
-            <button id="menu-btn" class="text-2xl focus:outline-none">
-                &#9776;
-            </button>
-        </div>
-
-        <!-- Nav links for desktop -->
-        <div id="nav-elements"
-            class="hidden md:flex md:justify-between md:items-center md:w-3/6 text-xl font-semibold space-x-6 lg: text-xl">
-            <a href="" class="hover:text-gray-500">Home</a>
-            <a href="" class="hover:text-gray-500">About Us</a>
-            <a href="" class="hover:text-gray-500">Contact Us</a>
-            <a href="" class="hover:text-gray-500">Donate</a>
-        </div>
-    </nav>
-
-    <!-- Mobile menu -->
-    <div id="mobile-menu" class="flex flex-col justify-evenly py-4 text-xl font-semibold hidden md:hidden px-6 py-4">
-        <a href="" class="py-4">Home</a>
-        <hr>
-        <a href="" class="py-4">About Us</a>
-        <hr>
-        <a href="" class="py-4">Contact Us</a>
-        <hr>
-        <a href="" class="py-4">Donate</a>
-        <hr>
+<nav class="sticky z-20  top-0 bg-white border-gray-200 dark:bg-gray-900">
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+      <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+          <img src="./logo.jpeg" class="h-8" alt="Logo" />
+          <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Noor-E-Khandesh</span>
+      </a>
+      <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
+          <span class="sr-only">Open main menu</span>
+          <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+          </svg>
+      </button>
+      <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+        <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+          <li>
+            <a href="#" class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500" aria-current="page">Home</a>
+          </li>
+          <li>
+            <a href="#about" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">About</a>
+          </li>
+          <li>
+            <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Activities</a>
+          </li>
+          <li>
+            <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a>
+          </li>
+          <li>
+            <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Donate</a>
+          </li>
+        </ul>
+      </div>
     </div>
+  </nav>
+<!-- carousel -->
     <section>
-        <div class="w-full mx-0 my-1">
+        <div class="w-full mx-0 my-0">
             <div id="carousel" class="relative w-full h-[600px] overflow-hidden">
                 <!-- Carousel Items -->
                 <div class="carousel-item active w-full h-full">
@@ -68,14 +71,88 @@
             </div>
         </div>
     </section>
-    <div class="text-center my-8 px-4">
+<!-- our vision -->
+    <div class="text-center my-6 px-2 bg-gray-50 py-2">
         <h1 class="text-4xl md:text-5xl font-bold text-[#1059a8] mb-4">Our Vision</h1>
-        <p class="text-lg md:text-2xl text-gray-700 max-w-3xl mx-auto">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus harum expedita quam eligendi alias reprehenderit fuga, cum voluptates ipsam officia reiciendis. Eos, quia dolor.
+        <p class="text-lg md:text-2xl text-gray-700 max-w-6xl mx-auto leading-relaxed">
+            We are committed to fostering innovation and collaboration in communities. Our vision is to empower individuals and organizations with resources, technology, and knowledge to create a sustainable and inclusive future.
         </p>
     </div>
+<!-- about -->
+    <section id="about"class="bg-gray-100">
+        <div class="container mx-auto py-16 px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-8">
+                <div class="max-w-lg">
+                    <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">About Us</h2>
+                    <p class="mt-4 text-gray-600 text-lg">In February 2017, a group of compassionate individuals from the Khandesh region, specifically from the Jalgaon District, came together with a vision to uplift the lives of the underprivileged. This collective effort led to the formation of the Noor E Khandesh Educational And Welfare Trust (NKT), an NGO dedicated to serving the poor, needy, and deserving children, especially widows, unmarried women, and elderly women who are helpless and marginalized.
+
+                        Registered on June 21, 2017, under the Mumbai Public Trust Act of 1950, with Regd No E33250 (Mumbai), NKT aims to provide education, training, and financial independence to women and children who need it the most. The trust is managed by a group of highly qualified trustees, each with rich social experience and a deep commitment to making a positive difference in society.</p>
+                    <div class="mt-8">
+                        <a href="#" class="text-blue-500 hover:text-blue-600 font-medium">Learn more about us
+                            <span class="ml-2">&#8594;</span></a>
+                    </div>
+                </div>
+                <div class="mt-12 md:mt-0">
+                    <img src="./logo.jpeg" alt="About Us Image" class="object-cover rounded-lg shadow-md">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- team members -->
+    <section class="font-sans bg-gray-100">
+
+            <h2 class="text-4xl text-center font-semibold">Core Members</h2>
+            
+            <div id="team-container" class="flex flex-wrap gap-8 justify-center my-2"></div>
+          
+            <script>
+              // Fetch JSON data
+              fetch('data.json')
+                .then(response => {
+                  if (!response.ok) {
+                    throw new Error('Failed to load JSON file');
+                  }
+                  return response.json();
+                })
+                .then(data => {
+                  const teamContainer = document.getElementById('team-container');
+          
+                  data.forEach(member => {
+                    const memberElement = `
+                      <div class="team-member border border-gray-300 rounded-lg shadow-lg p-6 text-center bg-white w-56">
+                        <img src="${member.image}" alt="${member.name}" class="w-32 h-32 rounded-full mx-auto mb-4">
+                        <h3 class="text-xl font-medium">${member.name}</h3>
+                        <p class="text-sm text-gray-600">${member.role}</p>
+                        <p class="text-sm text-gray-500 mt-2">${member.bio}</p>
+                        <p class="text-sm text-gray-500 mt-2">Contact: ${member.contact}</p>
+                        <p class="text-sm text-gray-500 mt-2">Email: <a href="mailto:${member.email}" class="text-blue-500">${member.email}</a></p>
+                        <p class="text-sm text-gray-500 mt-2">Location: ${member.location}</p>
+                      </div>
+                    `;
+                    teamContainer.innerHTML += memberElement;
+                  });
+                })
+                .catch(error => {
+                  console.error('Error:', error);
+                  document.getElementById('team-container').innerText = 'Failed to load team data.';
+                });
+            </script>
+    </section>
+    
 
     <script>
+        document.addEventListener('DOMContentLoaded', () => {
+  // Select the toggle button and the navbar menu
+  const toggleButton = document.querySelector('[data-collapse-toggle="navbar-default"]');
+  const navbarMenu = document.getElementById('navbar-default');
+
+  // Add click event listener to the toggle button
+  toggleButton.addEventListener('click', () => {
+    // Toggle the 'hidden' class to show or hide the menu
+    navbarMenu.classList.toggle('hidden');
+  });
+});
+
         const slides = document.querySelectorAll('.carousel-item');
         const indicators = document.querySelectorAll('.carousel-indicator');
         let currentIndex = 0;
