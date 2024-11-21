@@ -1,0 +1,58 @@
+[
+    {
+      "name": "Dr. Kazim Malik",
+      "role": "Lecturer in SSL junior college, Career counsellor, President KAWISH (Teacher’s Organisation)",
+      "email": "malikkazim2001@gmail.com",
+      "contact": "9820785816",
+      "location": "Byculla, Mumbai",
+      "image": "./assets/members/advisory_committee/kazim.jpg"
+    },
+    {
+      "name": "Akhlaque Ahmed Shaikh",
+      "role": "Advisory committee member, Asst Teacher & Career Counsellor",
+      "email": "sakhlaque@ymail.com",
+      "contact": "9967329370",
+      "location": "Jogeshwari, Mumbai",
+      "image": "./assets/members/advisory_committee/akhlaque.jpg"
+    },
+    {
+      "name": "MOHAMMAD RAFIQUE AHEMAD SHAIKH",
+      "role": "Advisory Committee member, RTD H.M BMC SCHOOL",
+      "email": "rafiqueshaikh353@gmail.com",
+      "contact": "8879150194",
+      "location": "Andheri, Mumbai",
+      "image": "./assets/members/advisory_committee/rafique.jpg"
+    },
+    {
+      "name": "Shah khalil ibrahim Shah",
+      "role": "Advisory Committee Trust, Headmaster",
+      "email": "shahkhalils@gmail.com",
+      "contact": "8767675577",
+      "location": "Andheri, Mumbai",
+      "image": "./assets/members/advisory_committee/shah_khalil.jpg"
+    },
+    {
+      "name": "SHABBIR MAHAMUD MOMIN",
+      "role": "Advisory Committee Member, Retd. Assistant General Manager, Union Bank of India, Ex. Faculty, National School of Banking",
+      "email": "shabbirmomin1956@gmail.com",
+      "contact": "9820191599",
+      "location": "Kurla, Mumbai",
+      "image": "./assets/members/advisory_committee/shabbir.jpg"
+    },
+    {
+      "name": "Abdulmajid Abdulhamid Ansari",
+      "role": "Advisory Committee Member, Serial Entrepreneur, Head of Business Incubation",
+      "email": "abdulmajid.a@rediffmail.com",
+      "contact": "8422060195",
+      "location": "Mumbai Central, Mumbai",
+      "image": "./assets/members/advisory_committee/abdulmajid.jpg"
+    },
+    {
+      "name": "Abid Ali Wazir Ali Sayyed",
+      "role": "Advisory committee member, Headmaster",
+      "email": "abidalimalad@gmail.com",
+      "contact": "9004447745",
+      "location": "Malad, Mumbai",
+      "image": "./assets/members/advisory_committee/abidali.jpg"
+    }
+  ]
