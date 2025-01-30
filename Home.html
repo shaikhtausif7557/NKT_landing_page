@@ -71,15 +71,15 @@
 
     <section>
         <div class="w-full mx-0 my-0">
-            <div id="carousel" class="relative w-full h-[600px] overflow-hidden">
+            <div id="carousel" class="relative w-full h-[800px] overflow-hidden">
                 <div class="carousel-item active w-full h-full">
-                    <img src="./assets/blue.png" class="w-full h-full object-cover" alt="Slide 1">
+                    <img src="./assets/activities/slideshow1.jpeg" class="w-full h-full object-cover" alt="Slide 1">
                 </div>
                 <div class="carousel-item w-full h-full hidden">
-                    <img src="./assets/red.png" class="w-full h-full object-cover" alt="Slide 2">
+                    <img src="./assets/activities/slideshow2.jpeg" class="w-full h-full object-cover" alt="Slide 2">
                 </div>
                 <div class="carousel-item w-full h-full hidden">
-                    <img src="./assets/yellow.jpg" class="w-full h-full object-cover" alt="Slide 3">
+                    <img src="./assets/activities/slideshow3.jpeg" class="w-full h-full object-cover" alt="Slide 3">
                 </div>
 
                 <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-3">
@@ -137,107 +137,94 @@
     <section id='gallery' class="bg-gray-100 py-12">
         <h2 class="text-4xl text-center font-semibold text-[#1059a8] mb-8">Our Activities</h2>
         <div id="gallery-container" class="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 justify-center my-4">
-          <!-- Images will be dynamically added here -->
+            <!-- Images will be dynamically added here -->
         </div>
         <div class="text-center mt-8">
-          <button id="toggle-button"
-                  class="bg-[#1059a8] text-white px-6 py-3 rounded-lg shadow-md hover:bg-[#4885bc] transition-all">
-            Show All
-          </button>
+            <button id="toggle-button"
+                    class="bg-[#1059a8] text-white px-6 py-3 rounded-lg shadow-md hover:bg-[#4885bc] transition-all">
+                Show All
+            </button>
         </div>
-      
+    
         <!-- Modal for full image preview -->
         <div id="image-modal" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center hidden">
-          <div class="relative">
-            <img id="modal-image" src="" alt="Full View" class="max-w-full max-h-screen rounded-lg">
-            <button id="close-modal"
-                    class="absolute top-2 right-2 bg-white text-black p-2 rounded-full shadow-lg hover:bg-gray-300">
-              ✕
-            </button>
-          </div>
+            <div class="relative">
+                <img id="modal-image" src="" alt="Full View" class="max-w-full max-h-screen rounded-lg">
+                <button id="close-modal"
+                        class="absolute top-2 right-2 bg-white text-black p-2 rounded-full shadow-lg hover:bg-gray-300">
+                    ✕
+                </button>
+            </div>
         </div>
-      </section>
-      
-      <script>
-        const folderApi = new Bytescale.FolderApi({
-          apiKey: "secret_W142iuQAJYH2F2LKLu2BAZghqTGz"
-        });
-      
+    </section>
+    
+    <script>
         const galleryContainer = document.getElementById("gallery-container");
-        const toggleButton = document.getElementById("toggle-button");
         const imageModal = document.getElementById("image-modal");
         const modalImage = document.getElementById("modal-image");
         const closeModalButton = document.getElementById("close-modal");
-        let showAll = false; // Initially show only a few images
-        let allImages = []; // Store all fetched images
-      
-        // Function to render the gallery
-        const renderGallery = () => {
-          galleryContainer.innerHTML = ''; // Clear existing content
-          const imagesToShow = showAll ? allImages : allImages.slice(0, 6); // Show first 6 by default
-      
-          imagesToShow.forEach(image => {
-            const imageCard = document.createElement("div");
-            imageCard.className = "image-card border border-gray-300 rounded-lg shadow-lg p-4 bg-white";
-      
-            const imgElement = document.createElement("img");
-            imgElement.src = image.fileUrl;
-            imgElement.alt = "Gallery Image";
-            imgElement.className = "rounded-lg w-full object-cover mb-4 h-40 cursor-pointer";
-            
-            // Add click event to open modal
-            imgElement.addEventListener("click", () => {
-              modalImage.src = image.fileUrl; // Set the modal image source
-              imageModal.classList.remove("hidden"); // Show the modal
+        const toggleButton = document.getElementById("toggle-button");
+    
+        let showAll = false; // Track whether all images are shown
+    
+        // Fetch image filenames from the JSON file
+        fetch('images.json')
+            .then(response => response.json())
+            .then(images => {
+                renderImages(images);
+            })
+            .catch(error => {
+                console.error('Error fetching images:', error);
             });
-      
-            imageCard.appendChild(imgElement);
-            galleryContainer.appendChild(imageCard);
-          });
-      
-          toggleButton.textContent = showAll ? 'Show Less' : 'Show All ';
-        };
-      
-        // Fetch images from Bytescale API
-        folderApi
-          .listFolder({
-            accountId: "W142iuQ", // Replace with your actual account ID
-            folderPath: "/images",
-            recursive: false
-          })
-          .then(
-            result => {
-              allImages = result.items; // Store all images in the array
-              renderGallery(); // Render the initial gallery (first 6 images)
-            },
-            error => {
-              console.error('Error fetching images:', error);
-              galleryContainer.innerHTML = `
-                <div class="text-center text-red-500 font-bold">
-                  Failed to load gallery images.
-                </div>`;
-            }
-          );
-      
-        // Add event listener to toggle button
-        toggleButton.addEventListener('click', () => {
-          showAll = !showAll; // Toggle the showAll state
-          renderGallery(); // Re-render the gallery
+    
+        function renderImages(images) {
+            galleryContainer.innerHTML = ''; // Clear existing images
+            const imagesToShow = showAll ? images : images.slice(0, 3); // Show all or first 4 images
+    
+            imagesToShow.forEach(image => {
+                const imageCard = document.createElement("div");
+                imageCard.className = "image-card";
+    
+                const imgElement = document.createElement("img");
+                imgElement.src = image; // Use the path directly from JSON
+                imgElement.alt = "Gallery Image";
+                imgElement.className = "rounded-lg w-full object-cover mb-4 h-40 cursor-pointer";
+    
+                // Add click event to open modal
+                imgElement.addEventListener("click", () => {
+                    modalImage.src = image; // Set the modal image source
+                    imageModal.classList.remove("hidden"); // Show the modal
+                });
+    
+                imageCard.appendChild(imgElement);
+                galleryContainer.appendChild(imageCard);
+            });
+    
+            toggleButton.textContent = showAll ? 'Show Less' : 'Show All';
+        }
+    
+        // Toggle between showing all images and a subset
+        toggleButton.addEventListener("click", () => {
+            showAll = !showAll;
+            fetch('images.json')
+                .then(response => response.json())
+                .then(images => {
+                    renderImages(images);
+                });
         });
-      
+    
         // Close the modal
         closeModalButton.addEventListener("click", () => {
-          imageModal.classList.add("hidden"); // Hide the modal
+            imageModal.classList.add("hidden"); // Hide the modal
         });
-      
+    
         // Close modal on background click
         imageModal.addEventListener("click", (event) => {
-          if (event.target === imageModal) {
-            imageModal.classList.add("hidden");
-          }
+            if (event.target === imageModal) {
+                imageModal.classList.add("hidden");
+            }
         });
-      </script>
- 
+    </script>
         
 
 
