@@ -9,6 +9,15 @@
         "image": "./assets/members/nisar_biag.jpg"
     },
     {
+        "name": "Khan Akhlaque Ahmed",
+        "role": "Vice President",
+        "bio": "Ex.principal R C Mahim D.Ed collage of Education",
+        "contact": "8108403450",
+        "email": "Khan.akhlaque.ahmed@gmail.com",
+        "location": "Mumbai Central, Mumbai",
+        "image": "./assets/members/akhlaque.jpg"
+    },
+    {
         "name": "Sadique Ali Shamir Ali Sayed",
         "role": "Secretary",
         "bio": "Retired from BPCL Refineries Mumbai",

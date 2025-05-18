@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Adv Yusuf Abrahni",
+    "role": "Chief Patron",
+    "bio": "Ex Minister (Maharashtra State), Chairman Islam Gymkhana",
+    "image": "./assets/patrions/yusuf_abrahni.jpg"
+  },
+  {
+    "name": "Iqbal Memon Officer",
+    "role": "Patron",
+    "bio": "Chairman, All India Memon Jamat Federation Mumbai",
+    "image": "./assets/patrions/iqbal_memonn.jpg"
+  },
+  {
+    "name": "Hani Ahmed Farid",
+    "role": "Patron",
+    "bio": "Secretary, Anjuman Khairul Islam Trust Mumbai",
+    "image": "./assets/patrions/hani_ahmed.jpg"
+  },
+  {
+    "name": "Dr Shaikh Abdulla",
+    "role": "Patron",
+    "bio": "Vice President, Anjuman I Islam Trust Mumbai",
+    "image": "./assets/patrions/shaikh_abdullah.jpg"
+  },
+  {
+    "name": "AzizurRehman",
+    "role": "Director",
+    "bio": "City Maker Builder, Mumbai",
+    "image": "./assets/patrions/azizur_rehman.jpg"
+  }
+]
